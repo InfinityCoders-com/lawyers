@@ -25,6 +25,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "reset": "rm -rf node_modules && yarn",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
