@@ -1,26 +1,48 @@
-import React from 'react';
-import { Route, Router, Switch } from 'react-router-dom'
-import { ChakraProvider, extendTheme } from "@chakra-ui/react"
-import { createBrowserHistory } from 'history'
-import RouteLayout from './components/RouteLayout';
-
+import { ChakraProvider } from "@chakra-ui/react";
+import { createBrowserHistory } from 'history';
+import React, { Suspense } from 'react';
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
+import { Route, Router, Switch } from 'react-router-dom';
+import { Layout } from './components';
+import { IRouteConfig, shareRoutes } from './config/routes';
 const history = createBrowserHistory()
 
-const RoutesPath = {
-  LOGIN: '/login',
-  LOGOUT: '/logout'
-}
+const Loader = () => <div>'Loading...'</div>
+
+const queryClient = new QueryClient()
 
 function App() {
-  console.log(extendTheme)
   return (
     <div className="App">
       <ChakraProvider>
-        <Router history={history}>
-          <Route exact path={RoutesPath.LOGIN} component={RouteLayout} />
-          <Route exact path={RoutesPath.LOGOUT} component={RouteLayout} />
-          <Route exact path={'/'} component={RouteLayout} />
-        </Router>
+        <QueryClientProvider client={queryClient}>
+          <Suspense fallback={<Loader />}>
+            <Router history={history}>
+              <Switch>
+                {shareRoutes.map((route: IRouteConfig, i: number) => (
+                  <Route
+                    key={`${route.path}-${i}`}
+                    render={(props: any) => (
+                      <Layout
+                        {...props}
+                        {...route}
+                        route={route}
+                      />
+                    )}
+                    path={route.path}
+                    exact={route.exact}
+                  />
+                ))}
+              </Switch>
+            </Router>
+          </Suspense>
+        </QueryClientProvider>
       </ChakraProvider>
     </div>
   );

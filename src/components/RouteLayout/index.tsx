@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from "@chakra-ui/react"
-import Header from '../Header/Header'
+import { Header } from '../HeaderSidebar/Header'
 
 function RouteLayout() {
     return (
