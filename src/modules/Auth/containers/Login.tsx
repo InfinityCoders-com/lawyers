@@ -3,7 +3,6 @@ import React from 'react'
 import { AuthLayout } from '../components/AuthLayout';
 
 export function Login() {
-    console.log('Login');
     function onSubmit() {}
     return (
         <Flex direction="column" align="center" height="100%" pt="20vh">

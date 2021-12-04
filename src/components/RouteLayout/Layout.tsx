@@ -26,8 +26,6 @@ export const Layout: any = (props: IAppLayout) => {
   const { route, routesConfig, menuOpen, setMenuOpen } = props
   const RouteComponent: any = route.component
   const embed = new URL(document.location.href).searchParams.get('disableNav')
-  console.log(route);
-  
   return (
     <Flex direction="column" style={{ height: '100vh', overflow: 'hidden' }}>
       {route?.layout.includes('header') && <Header {...props} />}

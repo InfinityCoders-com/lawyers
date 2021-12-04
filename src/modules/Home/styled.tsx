@@ -12,6 +12,7 @@ export const HomeWrapper = styled(Flex)`
 export const BestPicksWrapper = styled.div`
     border: 2px solid #C9DEF2;
     background: #fff;
+    aspect-ratio: 1/2;
     box-shadow: inset 0px 0px 0px 10px #222;
     border-radius: 32px;
     padding: 20px 15px 30px;
@@ -30,6 +31,16 @@ export const FiltersCategory = styled(Flex)`
     width: 100%;
     margin: 10px 0;
     flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+`
+
+
+export const LawyerCard = styled(Flex)`
+    padding: 1vmax;
+    width: 100%;
+    margin: 1vmax;
     box-sizing: border-box;
     border: 1px solid #ececec;
     border-radius: 4px;
