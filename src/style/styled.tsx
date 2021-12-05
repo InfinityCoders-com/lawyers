@@ -1,4 +1,3 @@
-import * as COLORS from './colors.json'
 import styled from '@emotion/styled'
 import { MdPowerSettingsNew } from 'react-icons/md'
 

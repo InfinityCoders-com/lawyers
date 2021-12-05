@@ -2559,6 +2559,13 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
 
+"@types/react-addons-update@^0.14.21":
+  version "0.14.21"
+  resolved "https://registry.yarnpkg.com/@types/react-addons-update/-/react-addons-update-0.14.21.tgz#00feaa412c376cba2dd37a5adc347352ba15f4ed"
+  integrity sha512-HOxr0Hd8C1L4uw8DHyv2etqMVIj78oLEpe567/HgjoE+1Lc+PUsTGXTrkr1BDvFqsu5r49mSlgI5evwrk9eutA==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@^17.0.0":
   version "17.0.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.8.tgz#3180de6d79bf53762001ad854e3ce49f36dd71fc"
@@ -10254,6 +10261,13 @@ raw-body@2.4.0:
     http-errors "1.7.2"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+react-addons-update@^15.6.3:
+  version "15.6.3"
+  resolved "https://registry.yarnpkg.com/react-addons-update/-/react-addons-update-15.6.3.tgz#c449c309154024d04087b206d0400e020547b313"
+  integrity sha512-wBkjgx5cR0XTjZEz5jl2kScChrjI9T7rWVdaM0dLiIdHSgeHycLRdHPPiTgKk7vK18Od4rXmLJv91qofBXlE0A==
+  dependencies:
+    object-assign "^4.1.0"
 
 react-app-polyfill@^2.0.0:
   version "2.0.0"

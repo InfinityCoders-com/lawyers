@@ -1,4 +1,3 @@
-import RouteLayout from "../components/RouteLayout"
 import lazy from "../utility/lazy"
 
 const Login = lazy(() => import('../modules'), 'Login')

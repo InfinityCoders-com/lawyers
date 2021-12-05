@@ -1,15 +1,10 @@
-import React, { Suspense } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Flex } from '@chakra-ui/react'
+import React from 'react'
 import { Header, ShareHeader, Sidebar } from '../'
-import { TOKEN_KEY } from '../../config/constants'
-import { PortalDiv } from '../../style/styled'
 import ErrorBoundary from '../../components/ErrorBoundary'
 import { IRouteConfig } from '../../config/routes'
-import { Flex } from '@chakra-ui/react'
+import { PortalDiv } from '../../style/styled'
 
-function isAuthenticated() {
-  return !!localStorage.getItem(TOKEN_KEY)
-}
 interface LayoutRoute extends IRouteConfig {
     component: any
 }
