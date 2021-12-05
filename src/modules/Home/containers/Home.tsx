@@ -1,9 +1,16 @@
 import { Flex } from '@chakra-ui/react'
 import axios from 'axios'
 import React from 'react'
+<<<<<<< HEAD
 import { useQuery } from 'react-query'
 import { API_URLS, initialFilters } from '../../../config/constants'
 import AppliedFilters from '../components/AppliedFilters'
+=======
+import {
+    useQuery
+} from 'react-query'
+import { API_URLS, initialFilters } from '../../../config/constants'
+>>>>>>> 481e362 (Home, search, filter Listing design, best pick design)
 import { CitySelect } from '../components/CitySelect'
 import { Search } from '../components/Search'
 import { HomeWrapper } from '../styled'
