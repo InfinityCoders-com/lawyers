@@ -24,7 +24,6 @@ const queryClient = new QueryClient({
 function App() {
   React.useEffect(() => {
     axios.interceptors.request.use(function (config) {
-      console.log('Interceptor', config)
       var URL = `${API_URLS.baseURL}${config.url}`
       if(config.url?.includes('http')) {
         URL = config.url

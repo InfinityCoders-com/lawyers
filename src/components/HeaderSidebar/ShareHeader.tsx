@@ -26,6 +26,18 @@ const HeaderWrapper = styled(Flex)`
     right: 0;
 `
 
+const ShareHeaderLinks = styled(Flex)`
+    margin-right: 5vmax;
+    a {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        padding: 7px 12px;
+        margin: 4px;
+        text-decoration: none;
+    }
+`
+
 export function ShareHeader(props: any) {
     return (
         <Box style={{ position: 'relative' }}>
@@ -34,6 +46,10 @@ export function ShareHeader(props: any) {
                 <Link href={RoutesPath.HOME}>
                     <SpanLogo className="logo">Vakeel</SpanLogo>
                 </Link>
+                <ShareHeaderLinks style={{ marginLeft: 'auto' }}>
+                    <Link href={RoutesPath.LOGIN}>Login</Link>
+                    <Link href={RoutesPath.SIGNUP}>SignUp</Link>
+                </ShareHeaderLinks>
             </HeaderWrapper>
         </Box>
     )

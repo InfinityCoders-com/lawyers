@@ -4,6 +4,10 @@ export const API_URLS = {
     baseURL: 'https://vakeel-app.herokuapp.com',
     Lawyers: {
         list: '/api/v1/users'
+    },
+    Auth: {
+        signin: '/api/v1/authenticate',
+        signup: ''
     }
 }
 
@@ -50,9 +54,9 @@ export const initialFilters = {
             }
         }
     },
-    "category": {
-        filterKey: "category",
-        filterLabel: 'Category',
+    "education": {
+        filterKey: "education",
+        filterLabel: 'Education',
         options: {}
     }
 }
