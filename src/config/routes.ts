@@ -25,7 +25,8 @@ export const RoutesPath = {
     LOGIN: '/login',
     LOGOUT: '/logout',
     SIGNUP: '/signup',
-    FORGOT_PASSWORD: '/forgot-password'
+    FORGOT_PASSWORD: '/forgot-password',
+    PROFILE: '/profile'
 }
   
 
