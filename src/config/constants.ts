@@ -7,7 +7,7 @@ export const API_URLS = {
     },
     Auth: {
         signin: '/api/v1/authenticate',
-        signup: ''
+        signup: '/api/v1/users'
     }
 }
 
