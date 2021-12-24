@@ -57,11 +57,11 @@ export function Filters({ listing, filters, setFilters } : IFilters) {
                             {Object.entries(filtersWithCount.options).map(([filterValue, option]: any, j: number) => (
                                 <Flex key={j}>
                                     <Checkbox
-                                        disabled={!option.count}
+                                        isDisabled={!option.count}
                                         defaultIsChecked={option.selected}
                                         onChange={() => onExpFilterChange(filterKey, option)}
                                     >
-                                        <Text color={option.count ? "#727272" : "#a1a1a1"} fontSize="xs">{option.label} ({option.count})</Text>
+                                        <Text color={/*option.count ? "#727272" : "#a1a1a1"*/''} fontSize="xs">{option.label} ({option.count})</Text>
                                     </Checkbox>
                                 </Flex>
                             ))}

@@ -18,10 +18,10 @@ export function Listing({
     return (
         <React.Fragment>
             <Text>Count: {lawyersState.isLoading ? '...' : count}</Text>
-            {listing.map((lawyer: any) => {
+            {listing.map((lawyer: any,i: number) => {
                 const experience = parseInt(lawyer.experience || 0)
                 return (
-                    <LawyerCard>
+                    <LawyerCard key={i}>
                         <Image
                             src={lawyer.profileImg || ''}
                             fallbackSrc={LawyerUserIcon}

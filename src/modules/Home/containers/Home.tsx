@@ -3,6 +3,7 @@ import axios from 'axios'
 import React from 'react'
 import { useQuery } from 'react-query'
 import { API_URLS, initialFilters } from '../../../config/constants'
+import AppliedFilters from '../components/AppliedFilters'
 import { CitySelect } from '../components/CitySelect'
 import { Search } from '../components/Search'
 import { HomeWrapper } from '../styled'
@@ -43,6 +44,7 @@ export function Home() {
                 <Filters listing={lawyersState?.data?.content || []} filters={filters} setFilters={setFilters}/>
             </Flex>
             <Flex flexDirection="column" ml={15} mr={15}>
+                <AppliedFilters filters={filters} setFilters={setFilters}/>
                 <Listing
                     lawyersState={lawyersState}
                     listing={lawyersState?.data?.content || []}
