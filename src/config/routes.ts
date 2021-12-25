@@ -3,6 +3,8 @@ import lazy from "../utility/lazy"
 const Login = lazy(() => import('../modules'), 'Login')
 const Signup = lazy(() => import('../modules'), 'Signup')
 const Home = lazy(() => import('../modules'), 'Home')
+const Profile = lazy(() => import('../modules'), 'Profile')
+const Edit = lazy(() => import('../modules'), 'Edit')
 
 export interface IRouteConfig {
     authenticated: boolean
@@ -26,7 +28,8 @@ export const RoutesPath = {
     LOGOUT: '/logout',
     SIGNUP: '/signup',
     FORGOT_PASSWORD: '/forgot-password',
-    PROFILE: '/profile'
+    PROFILE: '/profile',
+    EDIT: '/edit'
 }
   
 
@@ -100,6 +103,34 @@ export const shareRoutes: IRouteConfig[] = [{
     layout: ['shareHeader'],
     link: RoutesPath.FORGOT_PASSWORD,
     path: RoutesPath.FORGOT_PASSWORD,
+    subType: '',
+    pageId: ''
+},{
+    authenticated: false,
+    bLabel: '',
+    children: undefined,
+    exact: true,
+    config: {},
+    component: Profile,
+    key: 'profile',
+    label: '',
+    layout: ['shareHeader'],
+    link: RoutesPath.PROFILE,
+    path: RoutesPath.PROFILE,
+    subType: '',
+    pageId: ''
+},{
+    authenticated: false,
+    bLabel: '',
+    children: undefined,
+    exact: true,
+    config: {},
+    component: Edit,
+    key: 'edit',
+    label: '',
+    layout: ['shareHeader'],
+    link: RoutesPath.EDIT,
+    path: RoutesPath.EDIT,
     subType: '',
     pageId: ''
 }]
