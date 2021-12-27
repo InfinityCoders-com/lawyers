@@ -23,8 +23,8 @@ export function Listing({
             {listing.map((lawyer: any,i: number) => {
                 const experience = parseInt(lawyer.experience || 0)
                 return (
-                    <Link to={{pathname:'/vakeel-profile', state: lawyer}}>
-                        <LawyerCard key={i}>
+                    <Link to={{pathname:'/vakeel-profile', state: lawyer}} key={i}>
+                        <LawyerCard>
                             <Image
                                 src={lawyer.profileImg || ''}
                                 fallbackSrc={LawyerUserIcon}
