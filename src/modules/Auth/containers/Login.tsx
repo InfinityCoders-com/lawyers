@@ -27,7 +27,6 @@ export function Login(props: RouterProps) {
                     setUserDetails(JSON.stringify(response.data))
                     history.replace(RoutesPath.HOME)
                 }
-                setSignInState({ ...signInState, error: '' })
             } catch(error: any) {
                 if (error.response?.status === 401) {
                     setSignInState({ 

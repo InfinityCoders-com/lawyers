@@ -5,6 +5,7 @@ const Signup = lazy(() => import('../modules'), 'Signup')
 const Home = lazy(() => import('../modules'), 'Home')
 const Profile = lazy(() => import('../modules'), 'Profile')
 const Edit = lazy(() => import('../modules'), 'Edit')
+const VakeelProfile = lazy(() => import('../modules'), 'VakeelProfile')
 
 export interface IRouteConfig {
     authenticated: boolean
@@ -29,7 +30,8 @@ export const RoutesPath = {
     SIGNUP: '/signup',
     FORGOT_PASSWORD: '/forgot-password',
     PROFILE: '/profile',
-    EDIT: '/edit'
+    EDIT: '/edit',
+    VAKEEL_PROFILE: '/vakeel-profile'
 }
   
 
@@ -131,6 +133,20 @@ export const shareRoutes: IRouteConfig[] = [{
     layout: ['shareHeader'],
     link: RoutesPath.EDIT,
     path: RoutesPath.EDIT,
+    subType: '',
+    pageId: ''
+},{
+    authenticated: false,
+    bLabel: '',
+    children: undefined,
+    exact: true,
+    config: {},
+    component: VakeelProfile,
+    key: 'vakeel-profile',
+    label: '',
+    layout: ['shareHeader'],
+    link: RoutesPath.VAKEEL_PROFILE,
+    path: RoutesPath.VAKEEL_PROFILE,
     subType: '',
     pageId: ''
 }]

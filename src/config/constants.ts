@@ -10,6 +10,9 @@ export const API_URLS = {
         signup: '/api/v1/users',
         login: '/api/v1/users',
         edit: '/api/v1/users'
+    },
+    User: {
+        profile: '/api/v1/users/profile'
     }
 }
 
