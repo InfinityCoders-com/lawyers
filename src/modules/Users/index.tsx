@@ -1,0 +1,1 @@
+export { VakeelProfile } from './containers/VakeelProfile'
