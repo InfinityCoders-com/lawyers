@@ -1,15 +1,12 @@
-import { Flex, Image, Text, Button } from '@chakra-ui/react'
-import axios from 'axios'
+import { Button, Flex, Image, Text } from '@chakra-ui/react'
 import React from 'react'
-import { useQuery } from 'react-query'
-import { API_URLS } from '../../../config/constants'
-import { LawyerCard } from '../../Home/styled'
-import { Link } from 'react-router-dom'
 import LawyerUserIcon from '../../../assets/images/download.png'
+import { LawyerCard } from '../../Home/styled'
 
 export function VakeelProfile(props: any) {
     console.log(props);
     // const filteredList = lawyersState?.data?.content.filter
+    const data = props.location.state;
     return (
         <Flex direction="column" align="center" height="100%" pt="5vh">
             <Text fontSize="24" pb={"5px"}></Text>
@@ -21,9 +18,9 @@ export function VakeelProfile(props: any) {
                             fallbackSrc={LawyerUserIcon}
                         />
                         <Flex flexDirection="column">
-                            <Text color="#3BA66C" fontWeight={600} fontSize="2xl">FName LName</Text>
-                            <Text color="#727272" fontSize="sm"><b>Address:</b> House no 269/7, Village Fatehpur Chandila, Near Sector 21/B, Faridabad</Text>
-                            <Text color="#727272" fontSize="sm"><b>Mobile:</b> +9717822270</Text>
+                            <Text color="#3BA66C" fontWeight={600} fontSize="2xl">{data.first_name} {data.last_name}</Text>
+                            <Text color="#727272" fontSize="sm"><b>Address:</b> {data.address_line_1}, {data.address_line_2}, <br /> {data.city}, {data.state} </Text>
+                            <Text color="#727272" fontSize="sm"><b>Mobile:</b> {data.phone_number} {data.secondary_phone}</Text>
                             <Text color="#727272"></Text>
                         </Flex>
                     </LawyerCard>

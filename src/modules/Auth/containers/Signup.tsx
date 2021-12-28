@@ -16,7 +16,7 @@ export function Signup(props: RouterProps) {
         setSignUpState({ ...signUpState, [e.target.name]: e.target.value.trim() })
     }
     async function onSubmit() {
-        if(signUpState.email && signUpState.password && signUpState.first_name.length && signUpState.last_name.length && signUpState.role_name && signUpState.address_line_1.length && signUpState.city.length && signUpState.state.length && signUpState.country.length && signUpState.pincode.length && signUpState.phone_number.length && signUpState.recoveryAnswer.length && signUpState.passwordconfirm.length && (signUpState.password == signUpState.passwordconfirm)){
+        if(signUpState.email && signUpState.password && signUpState.first_name.length && signUpState.last_name.length && signUpState.role_name && signUpState.address_line_1.length && signUpState.city.length && signUpState.state.length && signUpState.country.length && signUpState.pincode.length && signUpState.phone_number && signUpState.recoveryAnswer.length && signUpState.passwordconfirm.length && (signUpState.password == signUpState.passwordconfirm)){
             console.log('inside IF');
             try {
                 console.log('inside TRY');
@@ -102,7 +102,7 @@ export function Signup(props: RouterProps) {
                         <NumberInputField placeholder="Mobile Primary Number" name="phone_number" onChange={onChange} value={signUpState.phone_number} mb={1} />
                     </NumberInput>
                     <NumberInput>
-                        <NumberInputField  placeholder="Mobile Secondary Number" name="secondary_phone" onChange={onChange} value={signUpState.secondary_phone} mb={1}/>
+                        <NumberInputField placeholder="Mobile Secondary Number" name="secondary_phone" onChange={onChange} value={signUpState.secondary_phone} mb={1}/>
                     </NumberInput> 
                 </>
                 {signUpState.error ? <Text color="red"><sup>*</sup>{signUpState.error}</Text> : null}
